@@ -90,7 +90,7 @@ class ACF_Location {
 	function compare( $value, $rule ) {
 		
 		// Allow "all" to match any value.
-        if( $rule['value'] === 'all' ) {
+        if( !empty($rule['value']) && $rule['value'] === 'all' ) {
 	        $match = true;
 	        
         // Compare all other values.
