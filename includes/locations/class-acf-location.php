@@ -95,7 +95,7 @@ class ACF_Location {
 	        
         // Compare all other values.
         } else {
-	        $match = ( $value == $rule['value'] );
+	        $match = !empty($rule['value']) && ( $value == $rule['value'] );
         }
 		
 		// Allow for "!=" operator.
